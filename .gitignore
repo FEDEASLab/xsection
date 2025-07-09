@@ -1,0 +1,11 @@
+.ipynb_checkpoints/
+.DS_Store
+__pycache__/
+*.egg-info
+docs/_build/doctrees/
+
+docs/_build
+dist/
+_git/
+assets/
+
