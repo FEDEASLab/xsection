@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang=en>
+<head>
+  <meta charset=utf-8>
+  <title>{{ project }}</title>
+  <meta name=description content="{{ description }}">
+  <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta http-equiv=x-ua-compatible content="ie=edge">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ pathto(home_image,1) }}">
+  <meta name="twitter:title" content="{{ project }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:url" content="{{ html_baseurl }}"  />
+  
+  <meta property="og:locale" content="en_US"  />
+  <meta property="og:type" content="article"  />
+  <meta property="og:title" content="{{ project }} | Home"  />
+  <meta property="og:description" content="{{ description }}"  />
+  <meta property="og:url" content="{{ html_baseurl }}"  />
+  <meta property="og:site_name" content="{{ project }} Documentation"  />
+  <meta property="article:modified_time" content="2025-02-04T21:16:39+00:00"  />
+  <meta property="og:image" content="{{ pathto('_static/images/girder-light.png',1) }}" />
+  <meta property="og:image:width" content="1447"  />
+  <meta property="og:image:height" content="758"  />
+  <meta property="og:image:type" content="image/png"  />
+
+  {%- import "static/webpack-macros.html" as _webpack with context %}
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode  = "light"; // localStorage.getItem("mode") || "{{ default_mode }}";
+    document.documentElement.dataset.theme = "light"; // localStorage.getItem("theme") || "light";
+  </script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+
+  <link rel="canonical" href="{{ cannonical_home }}" >
+  <link rel="icon" type="image/x-icon" href="_static/images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Inconsolata">
+
+  <link rel="stylesheet"
+    href="{{ pathto('_static/css', 1) }}/external.css">
+  <link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css>
+  <link rel="stylesheet"
+    href="{{ pathto('_static/css', 1) }}/home-css/news.css">
+  <link rel="stylesheet"
+    href="{{ pathto('_static/css', 1) }}/home-css/keyfeatures.css">
+  <link rel="stylesheet"
+    href="{{ pathto('_static/css', 1) }}/home-css/casestudies.css">
+  <link rel="stylesheet"
+    href="{{ pathto('_static/css', 1) }}/home-css/vars.css">
+
+  <link rel="stylesheet"
+    href="{{ pathto('_static/css', 1) }}/veux.css">
+  <link rel="stylesheet"
+    href="{{ pathto('_static/css', 1) }}/home-css/home.css">
+</head>
+
+<body>
+  <nav id="navbar-clone" class="nav navbar navbar-nav is-fresh is-transparent" role="navigation" aria-label="main navigation">
+  {% if False %}
+    <!--
+  <nav class="navbar-nav navbar is-fresh" role="navigation">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="{{ _('Site Navigation') }}">
+    {{ _("Site Navigation") }}
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    {{ generate_header_nav_html(n_links_before_dropdown=theme_header_links_before_dropdown) }}
+  </ul>
+</nav>
+  <nav id=nav class="navbar is-fresh is-transparent no-shadow" role=navigation aria-label="main navigation">
+    {#- include "sections/header.html" #}
+  </nav>
+  -->
+  {% endif %}
+
+    <div class="container is-max-widescreen">
+      <div class=navbar-brand>
+        <a class=navbar-item href="/"><img alt="{{ project }} branding" class="navbar-logo" src="{{ pathto('_static/images/logo.png', 1) }}" >
+          <div class=navbar-logo-text></div>
+        </a>
+        <a role=button class="navbar-burger" aria-label="menu" aria-expanded=false
+          data-target="navbar-menu"><span aria-hidden="true"></span>
+          <span aria-hidden=true></span>
+          <span aria-hidden=true></span></a>
+      </div>
+      <div id=navbar-menu class="navbar-menu is-static">
+        <div class=navbar-end>
+          <ul class="navbar-item bd-navbar-elements " style="display: flex; flex-direction: row;">
+            {{ generate_header_nav_html(n_links_before_dropdown=theme_header_links_before_dropdown) }}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-title-content">
+          <div class="flex-column">
+          <div class="hero-title">{{ project }}</div>
+          <div class="hero-subtitle">{{ description }}</div>
+          <div class="hero-cta"><a href="{{ pathto('api/index') }}">
+              <button class="cta-button">Get Started</button>
+              </a>
+          </div>
+        </div>
+          <div class="flex-column">
+            <img class="header-image only-light" src="{{ pathto('_static/images/girder-light.png', 1) }}" alt="{{ project }} logo. ">
+            <!-- <img class="header-image only-dark" src="{{ pathto('_static/images/girder-dark.png', 1) }}" alt="{{ project }} logo. "> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <pre class=""><div class="text-center">pip install {{ project }}</div></pre>
+
+  <section>
+    <div class="container">
+      <div class="col-md-8 mx-auto my-auto text-center">
+        <p>{{ introduction }}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="keyfeatures">
+    <div class="container is-max-widescreen">
+      <div class="keyfeatures-box-container">
+      {% for feature in features %}
+        <div class="keyfeatures-box-content keyfeatures-underline">
+          <p>
+          <div class="keyfeatures-box-title lead">{{ feature.title }}</div>
+          <!-- keyfeatures-box-title -->
+          <div class="keyfeatures-box-text">
+            {{ feature.body }}
+          </div>
+          </p>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  {% if examples %}
+  <section class="casestudies">
+    <div class="container">
+      <h2 class="">Gallery</h2>
+      <div class="casestudies-box-container">
+        {% for example in examples %}
+        <a class="casestudies-box-content casestudies-underline"
+          href="{{example.link}}">
+          <div class=casestudies-box-title>{{ example.title }}</div><img
+               src="{{ pathto('_static/../_images', 1) }}/{{ example.image }}" 
+               alt="rendering from an example">
+          <div class="casestudies-box-text">{{ example.description }}</div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <section>
+    <div class="container">
+      <h2>Pacific Earthquake Engineering Center</h2>
+      <div class="col-md-8 mx-auto text-center">
+        <p>
+          <em><strong>xara</strong></em> is a free tool developed at the University of California, Berkeley and published by the Pacific Earthquake Engineering Research center.
+        </p>
+        <hr class="my-4">
+        <div class="row g-3">
+          <div class="col-sm-6 mb-2">
+            <a class="d-block pe-lg-4 text-decoration-none lh-sm" href="https://pypi.org/project/irie">
+              <h4 class="mb-0 fs-5">irie</h4>
+              <small class="text-body-secondary">An infrastructure resilience engine powering the <em><a href="https://structures.live">BRACE<sup class="superscript">2</sup></a></em> platform for structural health monitoring.</small>
+            </a>
+          </div>
+          <div class="col-sm-6 mb-2">
+            <a class="d-block pe-lg-4 text-decoration-none lh-sm" href="https://veux.io">
+              <h4 class="mb-0 fs-5">veux</h4>
+              <small class="text-body-secondary">Web-first visualization framework for finite element analysis.</small>
+            </a>
+          </div>
+          <div class="col-sm-6 mb-2">
+            <a class="d-block pe-lg-4 text-decoration-none lh-sm" href="https://mdof.chrystalchern.com/">
+              <h4 class="mb-0 fs-5">mdof</h4>
+              <small class="text-body-secondary">Fast and friendly system identification.</small>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Partners</h2>
+      <hr class="my-4">
+      <div class="col-md-8 mx-auto text-center">
+        <table style="width: 83.4204%; height: 221px;">
+          <tbody>
+          <tr style="height: 107px;" class="my-auto" >
+            <td style="height: 107px;"><a href="https://peer.berkeley.edu/"><img decoding="async" class="wp-image-593 size-full aligncenter" src="https://stairlab.berkeley.edu/wp-content/uploads/2025/01/PEER_logo_old.svg" alt="PEER logo"></a></td>
+            <td style="height: 107px;"><a href="https://dot.ca.gov/" rel="nofollow"><img decoding="async" class="aligncenter" src="https://raw.githubusercontent.com/claudioperez/sdof/master/docs/assets/Caltrans.svg.png" alt="Caltrans Logo" width="100"></a></td>
+            <td style="height: 107px;"><a href="https://www.conservation.ca.gov"><img decoding="async" class="size-medium aligncenter" src="https://www.conservation.ca.gov/_catalogs/masterpage/DOC/images/DOC-logo-mobile.svg" width="300" height="89"></a></td>
+            <td style="height: 107px;"><img decoding="async" src="https://earimediaprodweb.azurewebsites.net/Api/v1/Multimedia/d4957b87-a007-48a9-8a66-d298a625b80c/Rendition/low-res/Content/Public" alt="Berkeley Lab logo [IMAGE] | EurekAlert! Science News Releases"></td>
+          </tr>
+          <tr style="height: 114px;" class="my-auto">
+            <td style="height: 114px; width: 22.6732%;"><a href="https://nsf.gov/" rel="nofollow"><img decoding="async" class="aligncenter" src="https://raw.githubusercontent.com/STAIRlab/.github/master/profile/assets/NSF_4-Color_bitmap_Logo.png" alt="NSF Logo" width="100"></a></td>
+            <td style="height: 114px; width: 19.8796%;"><a href="https://steer.network/" rel="nofollow"><img decoding="async" class="aligncenter" src="https://raw.githubusercontent.com/STAIRlab/.github/master/profile/assets/StEER-logo_thumb-2_lg.png" alt="StEER Logo" width="100"></a></td>
+            <td style="height: 114px; width: 22.6342%;"><a href="https://nsf.gov/" rel="nofollow"><img decoding="async" class="aligncenter" src="https://raw.githubusercontent.com/STAIRlab/.github/master/profile/assets/StEER-logo_words%20only.png" alt="NSF Logo" width="100"></a></td>
+            <td style="width: 17.9355%; height: 107px;"><img decoding="async" class="aligncenter" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Bart-logo.svg/1280px-Bart-logo.svg.png" alt="File:Bart-logo.svg - Wikipedia"></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
+    <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+      <div class="row">
+        <div class="col-lg-3 mb-3">
+          <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="/" aria-label="STAIRlab">
+            <a href="https://stairlab.berkeley.edu">
+              <img id=footer-logo style="max-width: 50;" src="{{ pathto('_static/images', 1) }}/peer-black-100.png"
+              alt="STAIRLab logo."></a>
+            <span class="fs-5">STAIRLab</span>
+          </a>
+          <ul class="list-unstyled small">
+            <li class="mb-2">Built by PEER in Berkeley, CA.</li>
+            <li class="mb-2">Code licensed <a href="https://github.com/{{ github_user }}/{{ project }}/blob/master/.github/LICENSE" target="_blank" rel="license noopener">BSD</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+          <h5>Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://pypi.org/project/{{ project }}/">Install</a></li>
+            <li class="mb-2"><a href="{{ pathto('api/index') }}">Documentation</a></li>
+            <li class="mb-2"><a href="https://gallery.stairlab.io">Examples</a></li>
+            <li class="mb-2"><a href="./cite.html" >Citing</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Community</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://github.com/{{ github_user }}/{{ github_repo }}/issues" target="_blank" rel="noopener">Issues</a></li>
+            <li class="mb-2"><a href="https://github.com/{{ github_user }}/{{ github_repo }}/discussions" target="_blank" rel="noopener">Discussions</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Projects</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://structures.live">structures.live</a></li>
+          </ul>
+        </div>
+        <div class="veux-footer col-6 col-lg-2 mb-3">
+          <div class="social-media-icons">
+            <a class=level-item href=https://github.com/{{ github_user }}/{{ github_repo }}
+               aria-label=https://github.com/{{ github_user }}/{{ github_repo }}><svg class="icon github-icon" viewBox="0 0 24 24"
+              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                 d="M12 .297c-6.63.0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577.0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93.0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176.0.0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22.0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22.0 1.606-.015 2.896-.015 3.286.0.315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
