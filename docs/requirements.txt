@@ -2,6 +2,9 @@ sphinx==8.2.3
 pydata-sphinx-theme
 sphinx-tabs
 xsection
+xara
+tcinter
+veux
 sphinx-sitemap<2.7.0
 sphinx-copybutton
 myst-parser
