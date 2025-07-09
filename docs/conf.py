@@ -6,7 +6,7 @@ from pathlib import Path
 project = 'xsection'
 copyright = '2025'
 author = 'Claudio Perez'
-description = "Structural cross sections."
+description = "Analysis of structural cross sections."
 version = '0.0.0'
 release = '0.0.0'
 
@@ -16,7 +16,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     # 'autoapi.extension',
-    'myst_parser',
+    "myst_nb",
     'sphinx_tabs.tabs',
     'sphinx_copybutton',
     'sphinx.ext.mathjax',
@@ -39,12 +39,8 @@ root_doc = 'index'
 language = 'en'
 
 # -- Options for HTML output -------------------------------------------------
-sitemap_url_scheme = "{link}"
-sitemap_excludes = [
-    "https://xsection.io/index.html"
-]
 html_extra_path = ["robots.txt"]
-html_baseurl = "https://xsection.io/"
+html_baseurl = "https://peer-open-source.github.io/xsection/" #"https://xsection.io/"
 html_title = project
 html_theme = "pydata_sphinx_theme"
 html_static_path = ['_static']
@@ -57,6 +53,10 @@ html_css_files = [
     "css/veux.css",
 ]
 
+sitemap_url_scheme = "{link}"
+sitemap_excludes = [
+    f"{html_baseurl}index.html"
+]
 html_additional_pages = {'index': 'home.html'}
 g = "https://gallery.stairlab.io"
 html_context = {
