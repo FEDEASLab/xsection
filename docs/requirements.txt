@@ -3,7 +3,7 @@ pydata-sphinx-theme
 sphinx-tabs
 xsection
 xara
-tcinter
+#tcinter
 veux
 sphinx-sitemap<2.7.0
 sphinx-copybutton
