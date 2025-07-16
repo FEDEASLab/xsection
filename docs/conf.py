@@ -23,6 +23,7 @@ extensions = [
     'sphinx.ext.githubpages',
     'sphinx_sitemap'
 ]
+nb_execution_mode = "off"
 myst_enable_extensions = [
     "dollarmath",
     "attrs_inline"
