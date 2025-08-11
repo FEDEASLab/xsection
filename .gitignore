@@ -6,6 +6,9 @@ docs/_build/doctrees/
 
 docs/_build
 dist/
-_git/
 assets/
 
+_git/
+__git
+docs/
+src/
