@@ -46,9 +46,9 @@ dependencies = [
   "veux>=0.0.40",
   # Analysis
   "xara>=0.0.8",
-  "opensees",
+  "opensees>=0.1.22",
   # Meshing
-  "pygmsh",
+# "pygmsh",
   "cytriangle",
   "meshio",
 ]
