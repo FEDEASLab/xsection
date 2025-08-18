@@ -24,6 +24,7 @@ The ``xsection.library`` submodule exposes the following convenience classes whi
    WideFlange <WideFlange>
    Channel <Channel>
    Angle <Angle>
+   aisc_data <aiscData>
 
 
 .. toctree::

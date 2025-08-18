@@ -58,6 +58,10 @@ Home = "https://fedeas.net"
 #repository = "http://github.com/FEDEASLab/xsection"
 #documentation = "https://brace2.github.io/xsection"
 
+[project.scripts]
+xs = "xsection.__main__:main"
+
+
 [build-system]
 requires = [
     "setuptools >= 52.0.2",

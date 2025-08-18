@@ -6,7 +6,7 @@
 ```{currentmodule} xsection.library
 ```
 
-# Library
+# Shape Library
 
 The `xsection.library` submodule holds several convenience classes that wrap the core sections:
 
