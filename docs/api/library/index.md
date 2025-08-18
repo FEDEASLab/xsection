@@ -14,12 +14,13 @@ The `xsection.library` submodule holds several convenience classes that wrap the
 .. autosummary::
    :toctree: ./
 
-   from_aisc <fromAISC>
    Circle <Circle>
    Rectangle <Rectangle>
    WideFlange
    Channel <Channel>
    Angle
+   from_aisc <fromAISC>
+   aisc_data <aiscData>
 
 ```
 
