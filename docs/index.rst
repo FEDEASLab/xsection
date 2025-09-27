@@ -8,6 +8,7 @@ xsection
    :caption: Contents:
 
    api/index
-   theory/index
    examples/index
 
+..
+   theory/index
