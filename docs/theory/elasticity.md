@@ -14,3 +14,4 @@ resistance to curvature, defined tensorially by the expression:
 $$
 \texttt{cmm} = \int -\boldsymbol{r}^{\times}\boldsymbol{r}^{\times}\,\mathrm{d}A
 $$
+

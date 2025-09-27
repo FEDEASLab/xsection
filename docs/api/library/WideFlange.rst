@@ -3,11 +3,6 @@
 WideFlange
 ^^^^^^^^^^
 
-.. autoclass:: xsection.library.WideFlange
-   :members:
-   :undoc-members:
-
-
 .. currentmodule:: xsection.library
 
 .. autoclass:: WideFlange
@@ -20,10 +15,8 @@ WideFlange
       ~WideFlange.d
       ~WideFlange.bf
       ~WideFlange.tf
-      ~WideFlange.tw
-      ~WideFlange.centroid
-      ~WideFlange.elastic
-      ~WideFlange.model
+      ~WideFlange.tw 
+      ~WideFlange.k
    
 
    .. rubric:: Methods
@@ -40,3 +33,8 @@ WideFlange
       ~WideFlange.torsion_warping
       ~WideFlange.translate
    
+
+.. autoclass:: xsection.library.WideFlange
+   :members:
+   :undoc-members:
+
