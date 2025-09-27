@@ -9,4 +9,3 @@ elastic
 
 .. autoclass:: ElasticConstants
    :members:
-   :undoc-members:

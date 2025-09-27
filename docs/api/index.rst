@@ -22,6 +22,7 @@ The ``xsection.library`` submodule exposes the following convenience classes whi
    Circle <Circle>
    Rectangle <Rectangle>
    WideFlange <WideFlange>
+   HalfFlange <HalfFlange>
    Channel <Channel>
    Angle <Angle>
    aisc_data <aiscData>
@@ -32,11 +33,11 @@ The ``xsection.library`` submodule exposes the following convenience classes whi
    :hidden:
 
    xsection <self>
+   library/index
    attributes/index
    methods/index
    polygon/xsection.PolygonSection
    composite/xsection.CompositeSection
-   library/index
 
 
 .. currentmodule:: xsection

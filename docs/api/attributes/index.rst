@@ -4,6 +4,6 @@ Attributes
 .. toctree::
    :maxdepth: 1
    
-   xsection.Section.elastic
+   elastic
    surface
 

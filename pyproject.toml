@@ -1,6 +1,6 @@
 [project]
 name = "xsection"
-version = "0.0.20"
+version = "0.0.23"
 authors = [
   {name="Claudio M. Perez", email="50180406+claudioperez@users.noreply.github.com"}
 ]
@@ -42,7 +42,7 @@ classifiers = [
 
 dependencies = [
   "numpy",
-  "shps>=0.0.28",
+  "shps>=0.0.29",
   "veux>=0.0.40",
   # Analysis
   "xara>=0.0.8",
