@@ -7,5 +7,7 @@ Examples
 
    introduction
    library
+   composite
+   uniaxial-capacity
    moment-curvature
 
