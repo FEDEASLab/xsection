@@ -6,7 +6,7 @@ Examples
    :maxdepth: 1
 
    introduction
-   library
+   transformations
    composite
    uniaxial-capacity
    moment-curvature

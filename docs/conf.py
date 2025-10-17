@@ -65,9 +65,9 @@ html_context = {
     "examples": [
     ],
     "features": [
-        {"title": "Free", "body": "All source code contributed to xsection is licensed under a <em>pure</em> BSD."},
-        {"title": "Accurate", "body": "."},
-        {"title": "Integrated", "body": 'xsection is designed to integrate with state-of-the-art open-source software like <a href="https://xara.so">xara</a>.'},
+        # {"title": "Free", "body": "All source code contributed to xsection is licensed under a <em>pure</em> BSD."},
+        # {"title": "Accurate", "body": "."},
+        # {"title": "Integrated", "body": 'xsection is designed to integrate with state-of-the-art open-source software like <a href="https://xara.so">xara</a>.'},
     ],
     "home_image": "_static/images/home.png",
     "cannonical_home": "https://xsection.io",
@@ -92,14 +92,14 @@ autodoc_member_order = 'bysource'
 
 html_static_path = ["_static"]
 
-g = f"{html_baseurl}/examples/"# "https://gallery.stairlab.io"
+g = f"{html_baseurl}examples"# "https://gallery.stairlab.io"
 def _add_examples(app, pagename, templatename, context, doctree):
     if templatename == "home.html":
         context["home_image"] = "_static/images/girder-light.png"
         context["examples"] = [
-            {"title": "Basic Shapes",  "link": f"{g}/introduction/",      "image": "../_static/images/gallery/ShapeLibrary.png", "description": "Material and section constants."},
-            {"title": "Stresses",    "link": f"{g}/examples/framesections/",     "image": "../_static/images/gallery/HaywardSmall.png", "description": "Detailed analysis of structural cross sections."},
-            {"title": "Composites",   "link": f"{g}/examples/example2/",     "image": "../_static/images/gallery/concrete.png", "description": "."},
+            {"title": "Basic Shapes",  "link": f"{g}/introduction.html",      "image": "../_static/images/gallery/W14x211.png", "description": "Material and section constants."},
+            {"title": "Transforms",    "link": f"{g}/transformations.html",     "image": "../_static/images/gallery/transform.png", "description": "Transform shapes."},
+            {"title": "Composites",   "link": f"{g}/composite.html",    "image": "../_static/images/gallery/concrete.png", "description": "."},
         ]
 
 def _add_css(app, pagename, templatename, context, doctree):
