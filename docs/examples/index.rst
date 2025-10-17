@@ -7,6 +7,7 @@ Examples
 
    introduction
    transformations
+   fibers
    composite
    uniaxial-capacity
    moment-curvature
