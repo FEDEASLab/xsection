@@ -28,13 +28,12 @@ WideFlange
       ~WideFlange.interior
       ~WideFlange.linspace
       ~WideFlange.rotate
-      ~WideFlange.shear_factor
       ~WideFlange.summary
       ~WideFlange.torsion_warping
       ~WideFlange.translate
    
 
-.. autoclass:: xsection.library.WideFlange
-   :members:
-   :undoc-members:
+.. .. autoclass:: xsection.library.WideFlange
+..    :members:
+..    :undoc-members:
 
