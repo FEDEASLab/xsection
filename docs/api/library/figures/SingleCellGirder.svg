@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="-7200 -1100 14400 3800"
+   width="1340"
+   height="380"
+   font-family="'Helvetica Neue', Arial, sans-serif"
+   version="1.1"
+   id="svg41"
+   sodipodi:docname="SingleCellGirder.svg"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview41"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.85598797"
+     inkscape:cx="618.58346"
+     inkscape:cy="83.529211"
+     inkscape:window-width="1680"
+     inkscape:window-height="910"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg41" />
+  <defs
+     id="defs2">
+    <marker
+       id="arr-s"
+       markerWidth="10"
+       markerHeight="7"
+       refX="10"
+       refY="3.5"
+       orient="auto-start-reverse">
+      <polygon
+         points="10 0, 0 3.5, 10 7"
+         fill="#B02020"
+         id="polygon1" />
+    </marker>
+    <marker
+       id="arr-e"
+       markerWidth="10"
+       markerHeight="7"
+       refX="0"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#B02020"
+         id="polygon2" />
+    </marker>
+    <style
+       id="style2">
+      .dl  { stroke:#B02020; stroke-width:6;  marker-start:url(#arr-s); marker-end:url(#arr-e); }
+      .el  { stroke:#B02020; stroke-width:3;  stroke-dasharray:20,15; }
+      .dt  { fill:#B02020; font-size:100px; font-weight:600; font-style:italic; }
+      .ds  { fill:#B02020; font-size:88px;  font-weight:600; font-style:italic; }
+      .lb  { fill:#405080; font-size:78px;  font-weight:600; font-style:italic; }
+      .cl  { stroke:#406090; stroke-width:4;  stroke-dasharray:50,20,10,20; }
+      .so  { fill:#D5CDBE; stroke:#303030; stroke-width:8; stroke-linejoin:round; }
+      .vo  { fill:#FFF;    stroke:#303030; stroke-width:6; stroke-linejoin:round; }
+    </style>
+  </defs>
+  <!-- ===== Title ===== -->
+  <text
+     x="0"
+     y="-820"
+     text-anchor="middle"
+     font-size="125"
+     font-weight="700"
+     fill="#202020"
+     id="text2">AASHTO-PCI-ASBI  Single-Cell Box Girder</text>
+  <!-- ===== Centerline ===== -->
+  <line
+     x1="0"
+     y1="-200"
+     x2="0"
+     y2="2150"
+     class="cl"
+     id="line3" />
+  <text
+     x="45"
+     y="-110"
+     class="lb"
+     font-size="68"
+     id="text4">CL</text>
+  <!-- ============================================== -->
+  <!--  Geometry with overhang + raised soffit          -->
+  <!--  Top:  br6=5500  br5=4200  br4=2830  br3=2561  -->
+  <!--        br1=1361                                  -->
+  <!--  Bot:  bs3=2250  bs2=2100  bs1=1200              -->
+  <!--  tr5=225  tr4=350  tr3=350  tr1=225              -->
+  <!--  ts1=225   ts2=450                               -->
+  <!--  Overhang: br5→br6, flat at tr5                  -->
+  <!-- ============================================== -->
+  <!-- ===== Exterior concrete (with overhang) ===== -->
+  <path
+     class="so"
+     d="     M -5500    0     L  5500    0     L  5500  225     L  4200  225     L  2830  350     L  2250 1800     L -2250 1800     L -2830  350     L -4200  225     L -5500  225     Z"
+     id="path4" />
+  <!-- ===== Interior void (with raised soffit) ===== -->
+  <path
+     class="vo"
+     d="     M -2561  350     L -1361  225     L  1361  225     L  2561  350     L  2100 1350     L  1200 1575     L -1200 1575     L -2100 1350     Z"
+     id="path5" />
+  <!-- ============= HORIZONTAL DIMENSIONS — TOP (right half) ============= -->
+  <!-- br1 -->
+  <line
+     x1="0"
+     y1="-80"
+     x2="0"
+     y2="-330"
+     class="el"
+     id="line5" />
+  <line
+     x1="1361"
+     y1="200"
+     x2="1361"
+     y2="-330"
+     class="el"
+     id="line6" />
+  <line
+     x1="0"
+     y1="-270"
+     x2="1361"
+     y2="-270"
+     class="dl"
+     id="line7" />
+  <text
+     x="680"
+     y="-310"
+     text-anchor="middle"
+     class="ds"
+     id="text7">br1</text>
+  <!-- br3 tick -->
+  <line
+     x1="2561"
+     y1="330"
+     x2="2561"
+     y2="-140"
+     class="el"
+     id="line8" />
+  <text
+     x="2561"
+     y="-60"
+     text-anchor="middle"
+     class="lb"
+     font-size="68"
+     id="text8">br3</text>
+  <!-- br4 tick -->
+  <line
+     x1="2830"
+     y1="330"
+     x2="2830"
+     y2="-140"
+     class="el"
+     id="line9" />
+  <text
+     x="2830"
+     y="-60"
+     text-anchor="middle"
+     class="lb"
+     font-size="68"
+     id="text9"
+     style="fill:#000000;opacity:1">br4</text>
+  <!-- br5 tick -->
+  <line
+     x1="4200"
+     y1="215"
+     x2="4200"
+     y2="-140"
+     class="el"
+     id="line10" />
+  <text
+     x="4200"
+     y="-60"
+     text-anchor="middle"
+     class="lb"
+     font-size="68"
+     id="text10">br5</text>
+  <!-- br6 -->
+  <line
+     x1="5500"
+     y1="-10"
+     x2="5500"
+     y2="-530"
+     class="el"
+     id="line11" />
+  <line
+     x1="0"
+     y1="-470"
+     x2="5500"
+     y2="-470"
+     class="dl"
+     id="line12" />
+  <text
+     x="2750"
+     y="-510"
+     text-anchor="middle"
+     class="dt"
+     id="text12">br6</text>
+  <!-- ============= HORIZONTAL DIMENSIONS — BOTTOM (right half) ============= -->
+  <!-- bs1 -->
+  <line
+     x1="1200"
+     y1="1585"
+     x2="1200"
+     y2="1950"
+     class="el"
+     id="line13" />
+  <line
+     x1="0"
+     y1="1810"
+     x2="0"
+     y2="1950"
+     class="el"
+     id="line14" />
+  <line
+     x1="0"
+     y1="1920"
+     x2="1200"
+     y2="1920"
+     class="dl"
+     id="line15" />
+  <text
+     x="600"
+     y="1960"
+     text-anchor="middle"
+     class="ds"
+     dy="40"
+     id="text15">bs1</text>
+  <!-- bs2 tick -->
+  <line
+     x1="2100"
+     y1="1360"
+     x2="2100"
+     y2="2060"
+     class="el"
+     id="line16" />
+  <text
+     x="2100"
+     y="2090"
+     text-anchor="middle"
+     class="lb"
+     font-size="68"
+     id="text16">bs2</text>
+  <!-- bs3 -->
+  <line
+     x1="2250"
+     y1="1810"
+     x2="2250"
+     y2="2200"
+     class="el"
+     id="line17" />
+  <line
+     x1="0"
+     y1="2150"
+     x2="2250"
+     y2="2150"
+     class="dl"
+     id="line18" />
+  <text
+     x="1125"
+     y="2290"
+     text-anchor="middle"
+     class="ds"
+     id="text18">bs3</text>
+  <!-- ============= VERTICAL DIMENSIONS — RIGHT SIDE ============= -->
+  <!-- d -->
+  <line
+     x1="5510"
+     y1="0"
+     x2="6550"
+     y2="0"
+     class="el"
+     id="line19" />
+  <line
+     x1="2260"
+     y1="1800"
+     x2="6550"
+     y2="1800"
+     class="el"
+     id="line20" />
+  <line
+     x1="6400"
+     y1="0"
+     x2="6400"
+     y2="1800"
+     class="dl"
+     id="line21" />
+  <text
+     x="6480"
+     y="960"
+     text-anchor="start"
+     class="dt"
+     font-size="115"
+     font-weight="700"
+     id="text21">d</text>
+  <!-- tr5 (at overhang) -->
+  <line
+     x1="5510"
+     y1="225"
+     x2="6050"
+     y2="225"
+     class="el"
+     id="line22" />
+  <line
+     x1="5900"
+     y1="0"
+     x2="5900"
+     y2="225"
+     class="dl"
+     id="line23" />
+  <text
+     x="5970"
+     y="150"
+     text-anchor="start"
+     class="ds"
+     id="text23">tr5</text>
+  <!-- ============= VERTICAL DIMENSIONS — LEFT SIDE ============= -->
+  <!-- tr1 -->
+  <line
+     x1="-1370"
+     y1="0"
+     x2="-1900"
+     y2="0"
+     class="el"
+     id="line24" />
+  <line
+     x1="-1370"
+     y1="225"
+     x2="-1900"
+     y2="225"
+     class="el"
+     id="line25" />
+  <line
+     x1="-1800"
+     y1="0"
+     x2="-1800"
+     y2="225"
+     class="dl"
+     id="line26" />
+  <text
+     x="-1870"
+     y="150"
+     text-anchor="end"
+     class="ds"
+     id="text26">tr1</text>
+  <!-- tr4 -->
+  <line
+     x1="-2840"
+     y1="0"
+     x2="-5700"
+     y2="0"
+     class="el"
+     id="line27" />
+  <line
+     x1="-2840"
+     y1="350"
+     x2="-5700"
+     y2="350"
+     class="el"
+     id="line28" />
+  <line
+     x1="-5580"
+     y1="0"
+     x2="-5580"
+     y2="350"
+     class="dl"
+     id="line29" />
+  <text
+     x="-5650"
+     y="215"
+     text-anchor="end"
+     class="ds"
+     id="text29">tr4</text>
+  <!-- ts1 -->
+  <line
+     x1="-1210"
+     y1="1575"
+     x2="-1900"
+     y2="1575"
+     class="el"
+     id="line30" />
+  <line
+     x1="-1210"
+     y1="1800"
+     x2="-1900"
+     y2="1800"
+     class="el"
+     id="line31" />
+  <line
+     x1="-1800"
+     y1="1575"
+     x2="-1800"
+     y2="1800"
+     class="dl"
+     id="line32" />
+  <text
+     x="-1870"
+     y="1720"
+     text-anchor="end"
+     class="ds"
+     id="text32">ts1</text>
+  <!-- ts2 -->
+  <line
+     x1="-2110"
+     y1="1350"
+     x2="-3300"
+     y2="1350"
+     class="el"
+     id="line33" />
+  <line
+     x1="-2260"
+     y1="1800"
+     x2="-3300"
+     y2="1800"
+     class="el"
+     id="line34" />
+  <line
+     x1="-3180"
+     y1="1350"
+     x2="-3180"
+     y2="1800"
+     class="dl"
+     id="line35" />
+  <text
+     x="-3250"
+     y="1610"
+     text-anchor="end"
+     class="ds"
+     id="text35">ts2</text>
+  <!-- ============= REGION LABELS ============= -->
+  <text
+     x="30.315434"
+     y="407.05307"
+     text-anchor="middle"
+     fill="#708090"
+     font-size="75px"
+     font-weight="300"
+     font-style="italic"
+     id="text37"
+     style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:171.94000127px;font-family:'Helvetica Neue', Arial, sans-serif;-inkscape-font-specification:'Helvetica Neue, Arial, sans-serif, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;opacity:1;fill:#000000">roadway</text>
+  <text
+     x="-10.105145"
+     y="1497.4766"
+     text-anchor="middle"
+     fill="#708090"
+     font-size="75"
+     font-weight="300"
+     font-style="italic"
+     id="text38"
+     style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:171.94000127px;font-family:'Helvetica Neue', Arial, sans-serif;-inkscape-font-specification:'Helvetica Neue, Arial, sans-serif, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;opacity:1;fill:#000000">soffit</text>
+  <text
+     x="2856.0483"
+     y="1029.4933"
+     text-anchor="middle"
+     class="lb"
+     font-size="72"
+     transform="rotate(0.84657312)"
+     id="text40"
+     style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:171.94px;font-family:'Helvetica Neue', Arial, sans-serif;-inkscape-font-specification:'Helvetica Neue, Arial, sans-serif, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;opacity:1;fill:#000000">web</text>
+  <text
+     x="4900.23"
+     y="431.31061"
+     text-anchor="middle"
+     class="lb"
+     font-size="65"
+     id="text41"
+     style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:171.94px;font-family:'Helvetica Neue', Arial, sans-serif;-inkscape-font-specification:'Helvetica Neue, Arial, sans-serif, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000">overhang</text>
+</svg>
