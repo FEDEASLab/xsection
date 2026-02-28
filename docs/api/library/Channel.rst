@@ -4,6 +4,16 @@
 Channel
 ^^^^^^^
 
-.. autoclass:: xsection.library.Channel
-   :members:
-   :undoc-members:
+.. currentmodule:: xsection.library
+
+.. autoclass:: Channel
+
+   .. rubric:: Attributes
+
+   .. autosummary::
+         
+      ~Channel.d
+      ~Channel.bf
+      ~Channel.tf
+      ~Channel.tw 
+      ~Channel.k
