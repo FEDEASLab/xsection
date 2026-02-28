@@ -21,17 +21,55 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.85598797"
-     inkscape:cx="618.58346"
-     inkscape:cy="83.529211"
+     inkscape:zoom="0.73478419"
+     inkscape:cx="698.84465"
+     inkscape:cy="163.99373"
      inkscape:window-width="1680"
      inkscape:window-height="910"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg41" />
+     inkscape:current-layer="layer1" />
   <defs
      id="defs2">
+    <marker
+       style="overflow:visible"
+       id="marker41"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="2"
+       markerHeight="2"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path41" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="2"
+       markerHeight="2"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
     <marker
        id="arr-s"
        markerWidth="10"
@@ -104,7 +142,8 @@
   <path
      class="so"
      d="     M -5500    0     L  5500    0     L  5500  225     L  4200  225     L  2830  350     L  2250 1800     L -2250 1800     L -2830  350     L -4200  225     L -5500  225     Z"
-     id="path4" />
+     id="path4"
+     style="fill:#cccccc" />
   <!-- ===== Interior void (with raised soffit) ===== -->
   <path
      class="vo"
@@ -126,13 +165,6 @@
      y2="-330"
      class="el"
      id="line6" />
-  <line
-     x1="0"
-     y1="-270"
-     x2="1361"
-     y2="-270"
-     class="dl"
-     id="line7" />
   <text
      x="680"
      y="-310"
@@ -193,13 +225,6 @@
      y2="-530"
      class="el"
      id="line11" />
-  <line
-     x1="0"
-     y1="-470"
-     x2="5500"
-     y2="-470"
-     class="dl"
-     id="line12" />
   <text
      x="2750"
      y="-510"
@@ -222,13 +247,6 @@
      y2="1950"
      class="el"
      id="line14" />
-  <line
-     x1="0"
-     y1="1920"
-     x2="1200"
-     y2="1920"
-     class="dl"
-     id="line15" />
   <text
      x="600"
      y="1960"
@@ -259,13 +277,6 @@
      y2="2200"
      class="el"
      id="line17" />
-  <line
-     x1="0"
-     y1="2150"
-     x2="2250"
-     y2="2150"
-     class="dl"
-     id="line18" />
   <text
      x="1125"
      y="2290"
@@ -288,13 +299,6 @@
      y2="1800"
      class="el"
      id="line20" />
-  <line
-     x1="6400"
-     y1="0"
-     x2="6400"
-     y2="1800"
-     class="dl"
-     id="line21" />
   <text
      x="6480"
      y="960"
@@ -311,13 +315,6 @@
      y2="225"
      class="el"
      id="line22" />
-  <line
-     x1="5900"
-     y1="0"
-     x2="5900"
-     y2="225"
-     class="dl"
-     id="line23" />
   <text
      x="5970"
      y="150"
@@ -340,13 +337,6 @@
      y2="225"
      class="el"
      id="line25" />
-  <line
-     x1="-1800"
-     y1="0"
-     x2="-1800"
-     y2="225"
-     class="dl"
-     id="line26" />
   <text
      x="-1870"
      y="150"
@@ -368,13 +358,6 @@
      y2="350"
      class="el"
      id="line28" />
-  <line
-     x1="-5580"
-     y1="0"
-     x2="-5580"
-     y2="350"
-     class="dl"
-     id="line29" />
   <text
      x="-5650"
      y="215"
@@ -396,13 +379,6 @@
      y2="1800"
      class="el"
      id="line31" />
-  <line
-     x1="-1800"
-     y1="1575"
-     x2="-1800"
-     y2="1800"
-     class="dl"
-     id="line32" />
   <text
      x="-1870"
      y="1720"
@@ -424,13 +400,6 @@
      y2="1800"
      class="el"
      id="line34" />
-  <line
-     x1="-3180"
-     y1="1350"
-     x2="-3180"
-     y2="1800"
-     class="dl"
-     id="line35" />
   <text
      x="-3250"
      y="1610"
@@ -475,4 +444,99 @@
      font-size="65"
      id="text41"
      style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:171.94px;font-family:'Helvetica Neue', Arial, sans-serif;-inkscape-font-specification:'Helvetica Neue, Arial, sans-serif, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000">overhang</text>
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Dimensions">
+    <line
+       x1="0"
+       y1="-270"
+       x2="1361"
+       y2="-270"
+       class="dl"
+       id="line7"
+       style="fill:#000000;stroke:#000000;stroke-opacity:1;marker-start:url(#Triangle);marker-end:url(#marker41)"
+       transform="translate(0,4.7761194e-5)" />
+    <line
+       x1="0"
+       y1="-470"
+       x2="5500"
+       y2="-470"
+       class="dl"
+       id="line12"
+       style="fill:#000000;stroke:#000000;stroke-opacity:1;marker-start:url(#Triangle);marker-end:url(#marker41)"
+       transform="translate(0,4.7761194e-5)" />
+    <line
+       x1="0"
+       y1="1920"
+       x2="1200"
+       y2="1920"
+       class="dl"
+       id="line15"
+       style="fill:#000000;stroke:#000000;stroke-opacity:1;marker-start:url(#Triangle);marker-end:url(#marker41)"
+       transform="translate(0,4.7761194e-5)" />
+    <line
+       x1="0"
+       y1="2150"
+       x2="2250"
+       y2="2150"
+       class="dl"
+       id="line18"
+       style="fill:#000000;stroke:#000000;stroke-opacity:1;marker-start:url(#Triangle);marker-end:url(#marker41)"
+       transform="translate(0,4.7761194e-5)" />
+    <line
+       x1="-1800"
+       y1="0"
+       x2="-1800"
+       y2="225"
+       class="dl"
+       id="line26"
+       transform="translate(0,4.7761194e-5)"
+       style="stroke:#000000;stroke-opacity:1;fill:#000000;marker-start:url(#Triangle);marker-end:url(#marker41)" />
+    <line
+       x1="-1800"
+       y1="1575"
+       x2="-1800"
+       y2="1800"
+       class="dl"
+       id="line32"
+       transform="translate(0,4.7761194e-5)"
+       style="stroke:#000000;stroke-opacity:1;fill:#000000;marker-start:url(#Triangle);marker-end:url(#marker41)" />
+    <line
+       x1="-3180"
+       y1="1350"
+       x2="-3180"
+       y2="1800"
+       class="dl"
+       id="line35"
+       style="fill:#000000;stroke:#000000;stroke-opacity:1;marker-start:url(#Triangle);marker-end:url(#marker41)"
+       transform="translate(0,4.7761194e-5)" />
+    <line
+       x1="-5580"
+       y1="0"
+       x2="-5580"
+       y2="350"
+       class="dl"
+       id="line29"
+       style="fill:#000000;stroke:#000000;stroke-opacity:1;marker-start:url(#Triangle);marker-end:url(#marker41)"
+       transform="translate(0,4.7761194e-5)" />
+    <line
+       x1="6400"
+       y1="0"
+       x2="6400"
+       y2="1800"
+       class="dl"
+       id="line21"
+       transform="translate(0,4.7761194e-5)"
+       style="marker-start:url(#Triangle);marker-end:url(#marker41);stroke:#000000;stroke-opacity:1" />
+    <line
+       x1="5900"
+       y1="0"
+       x2="5900"
+       y2="225"
+       class="dl"
+       id="line23"
+       transform="translate(0,4.7761194e-5)"
+       style="marker-start:url(#Triangle);marker-end:url(#marker41);stroke:#000000;stroke-opacity:1" />
+  </g>
 </svg>
