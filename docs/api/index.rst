@@ -21,10 +21,12 @@ The ``xsection.library`` submodule exposes the following convenience classes whi
    from_aisc <fromAISC>
    Circle <Circle>
    Rectangle <Rectangle>
+   HollowRectangle <HollowRectangle>
    WideFlange <WideFlange>
    HalfFlange <HalfFlange>
    Channel <Channel>
    Angle <Angle>
+   SingleCellGirder <SingleCellGirder>
    aisc_data <aiscData>
 
 
@@ -38,6 +40,7 @@ The ``xsection.library`` submodule exposes the following convenience classes whi
    methods/index
    polygon/xsection.PolygonSection
    composite/xsection.CompositeSection
+   analysis/index
 
 
 .. currentmodule:: xsection
