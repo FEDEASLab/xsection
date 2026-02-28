@@ -31,9 +31,7 @@ HalfFlange
       ~HalfFlange.interior
       ~HalfFlange.linspace
       ~HalfFlange.rotate
-      ~HalfFlange.shear_factor
       ~HalfFlange.summary
-      ~HalfFlange.torsion_warping
       ~HalfFlange.translate
    
 
