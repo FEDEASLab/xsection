@@ -16,15 +16,19 @@ The `xsection.library` submodule holds several convenience classes that wrap the
 
    Circle <Circle>
    Rectangle <Rectangle>
+   HollowRectangle <HollowRectangle>
    WideFlange
    HalfFlange
+   DoubleFlange <DoubleFlange>
    Channel <Channel>
    Angle
    Equigon
+   SingleCellGirder <SingleCellGirder>
    from_aisc <fromAISC>
    aisc_data <aiscData>
 
 ```
+
 
 
 ```{eval-rst}
@@ -35,9 +39,12 @@ The `xsection.library` submodule holds several convenience classes that wrap the
    from_aisc
    Circle
    Rectangle
+   HollowRectangle
    HalfFlange
    WideFlange
+   DoubleFlange
    Channel
    Angle
    Equigon
+   SingleCellGirder
 ```
