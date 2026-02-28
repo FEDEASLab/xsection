@@ -16,6 +16,11 @@
   <!-- <a href="https://xsection.github.io/"><strong>Documentation »</strong></a> -->
 </p>
 
+Note: In order to use the GMSH mesher, you must install:
+
+```bash
+conda install -c conda-forge libglu gmsh pygmsh
+```
 
 
 
