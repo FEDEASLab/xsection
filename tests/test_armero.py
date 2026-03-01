@@ -1,3 +1,7 @@
+"""
+Armero, F. On the Modeling of Restrained Torsional Warping in Prismatic Elastic Shafts (a Full Report). 2021.
+"""
+
 import pytest
 from xara import Material
 
@@ -33,39 +37,6 @@ neuber = [
     # [0.01,  2,         2.06474176e3,  8.03505311e3, 9.94116910e2,  3.12143230e5]
 ]
 
-def _ShapeM01():
-    # Section 7.5 of Armero's report
-
-    from xsection.library import DoubleFlange, Rectangle
-    from xsection import CompositeSection
-    from xara import Section, Material 
-    G = 76.92
-    E = 200.0
-
-    materials = {
-        "1": Material(E=E, G=G),
-        "2": Material(E=E/10, G=G/10)
-    }
-
-    h = 50
-    t = 0.04*h
-    bot = DoubleFlange(d=h,
-                       b2=0.3*h, 
-                       b1=0.6*h, 
-                       t2=1.25*t,
-                       t1=t, 
-                       tw=t,
-                       group="1", 
-                       material=materials["1"],
-                       mesh_scale=1/30
-    )
-
-    d = 0.2*h
-    top = Rectangle(d=d, b=h, group="2", mesh_scale=1/40, material=materials["2"])
-    top = top.translate([0, d/2+t/2])
-
-    return CompositeSection([top, bot])
-
 
 def test_composite():
     E1 = 200.0
@@ -79,7 +50,7 @@ def test_composite():
     Jv = shape.cvv()[0,0]/G1 
     Ja = sv.css()/E1
 
-    assert J  == pytest.approx(4000, rel=1e-1) # 4.23488407e3
+    assert J  == pytest.approx(4.23488407e3, rel=1e-1) # 
     assert Jv == pytest.approx(1.63767657e5, rel=2e-1)
     assert Jw == pytest.approx(1.75506164e6, rel=2e-1)
     assert Ja == pytest.approx(4.53999995e7, rel=2e-2)
@@ -116,7 +87,7 @@ def test_rectangle_T3():
                       mesher="triangle",
                       mesh_type="T3")
         sv = SaintVenantSectionAnalysis(s)
-        Jsc = sv.twist_rigidity()# s._analysis.torsion_constant()
+        Jsc = sv.twist_rigidity()
         Jwc = s.cww()[0,0]
         Jvc = s.cvv()[0,0]
         Jac = sv.css()
@@ -137,7 +108,7 @@ def test_rectangle_T3_material():
                       mesher="triangle",
                       mesh_type="T3")
         sv = SaintVenantSectionAnalysis(s)
-        Jsc = sv.twist_rigidity()# s._analysis.torsion_constant()
+        Jsc = sv.twist_rigidity()
         Jwc = s.cww()[0,0]/material["E"]
         Jvc = s.cvv()[0,0]/material["G"]
         Jac = sv.css()/material["E"]
@@ -194,11 +165,6 @@ def test_neuber_T6_triangle():
         Jwc = s.cww()[0,0]
         Jvc = s.cvv()[0,0]
         Jac = s.css()
-        # print("J   {:8.4f}\t {:8.4f}\t {:8.4f}".format((Jsc         -J )/J , Jsc, J ))
-        # print("Jw  {:8.4f}\t {:8.4f}\t {:8.4f}".format((s.cww()[0,0]-Jw)/Jw, Jwc, Jw))
-        # print("Jv  {:8.4f}\t {:8.4f}\t {:8.4f}".format((s.cvv()[0,0]-Jv)/Jv, Jvc, Jv))
-        # print("Ja  {:8.4f}\t {:8.4f}\t {:8.4f}".format((Jac         -Ja)/Ja, Jac, Ja))
-        # print()
         assert Jsc == pytest.approx(J,  rel=1e-2)
         assert Jwc == pytest.approx(Jw, rel=1e-1)
         assert Jvc == pytest.approx(Jv, rel=1e-2)
