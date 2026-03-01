@@ -98,3 +98,18 @@ def test_torsion():
     ky, kz = tr.sce()
     assert ky == pytest.approx(0.5993, rel=1e-3)
     assert kz == pytest.approx(0.2311, rel=1e-2)
+
+
+
+def test_fhwa():
+    # Example 1, page 271/369
+    #  https://www.fhwa.dot.gov/bridge/concrete/hif15016.pdf
+
+    material = {"E": 4, "G": 2}
+    shape = load_shape("G03", material=material, mesh_type="T6", mesh_scale=1/3)
+    u = shape.units
+
+    sv = SaintVenantSectionAnalysis(shape)
+    J = sv.twist_rigidity()/shape.material["G"]
+
+    assert J == pytest.approx(1697.5*u.ft**4, rel=5e-2)
