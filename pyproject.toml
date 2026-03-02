@@ -58,7 +58,7 @@ dependencies = [
 [project.urls]
 Home = "https://fedeas.net"
 #repository = "http://github.com/FEDEASLab/xsection"
-#documentation = "https://brace2.github.io/xsection"
+documentation = "https://peer-open-source.github.io/xsection"
 
 [project.scripts]
 xs = "xsection.__main__:main"
