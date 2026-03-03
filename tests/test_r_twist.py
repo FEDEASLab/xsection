@@ -18,9 +18,11 @@ def test_T3():
     assert sv.twist_rigidity() == pytest.approx(J, rel=1e-2)
 
 
+
 def test_T3_material():
 
-    shape = Rectangle(b=3, d=5, 
+    shape = Rectangle(b=3,
+                      d=5, 
                       mesh_scale=1/40,
                       material={"E": 4, "G": 2},
                       mesher="triangle",
@@ -36,7 +38,8 @@ def test_T3_material():
 
 
 def test_T6():
-    shape = Rectangle(b=3, d=5, 
+    shape = Rectangle(b=3,
+                      d=5, 
                       mesh_scale=1/5,
                       mesher="triangle",
                       mesh_type="T6")
@@ -60,7 +63,8 @@ def test_T6_gmsh():
     from xsection.library import Rectangle
     from xsection.properties import torsion_constant
     material = {"E": 4, "G": 2}
-    shape = Rectangle(b=3, d=5,
+    shape = Rectangle(b=3,
+                      d=5,
                       mesh_scale=1/10,
                       material=material,
                       mesher="gmsh",
@@ -82,7 +86,8 @@ def test_T6_material_gmsh():
     from xsection.library import Rectangle
     from xsection.properties import torsion_constant
 
-    shape = Rectangle(b=3, d=5,
+    shape = Rectangle(b=3,
+                      d=5,
                       mesh_scale=1/10,
                       material={"E": 4, "G": 2},
                       mesher="gmsh",
