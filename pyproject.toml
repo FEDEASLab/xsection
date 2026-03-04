@@ -1,6 +1,6 @@
 [project]
 name = "xsection"
-version = "0.0.28"
+version = "0.0.30"
 authors = [
   {name="Claudio M. Perez", email="50180406+claudioperez@users.noreply.github.com"}
 ]
@@ -15,6 +15,7 @@ keywords = [
   "structural analysis",
   "xara",
   "fedeas",
+  "opensees"
 ]
 
 classifiers = [
@@ -47,7 +48,7 @@ dependencies = [
   "shps>=0.0.33",
   "veux>=0.0.40",
   # Analysis
-  "xara>=0.0.8", # 16
+  "xara>=0.0.17", # 16
   "opensees>=0.1.22",
   # Meshing
 # "pygmsh",
@@ -57,8 +58,8 @@ dependencies = [
 
 [project.urls]
 Home = "https://fedeas.net"
-#repository = "http://github.com/FEDEASLab/xsection"
-documentation = "https://peer-open-source.github.io/xsection"
+Repository = "https://github.com/FEDEASLab/xsection"
+Documentation = "https://peer-open-source.github.io/xsection"
 
 [project.scripts]
 xs = "xsection.__main__:main"
