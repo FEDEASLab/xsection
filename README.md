@@ -25,7 +25,7 @@ Features include:
   - **Saint Venant and Vlasov torsion constants**
   - **Moment-Curvature** realtions backed by the complete Xara/OpenSees material libraries. 
   - **Interaction surfaces** 
-- Standard shape library including the complete [AISC]() steel database and standard [AASHTO-PCI-ASBI]() bridge box girders.
+- Standard shape library including the complete [AISC]() steel database and standard [AASHTO-PCI-ASBI](https://www.pci.org/PCI/PCI/Publications/PCI_Journal/Issues/1997/September-October/AASHTO-PCI-ASBI_Segmental_Box_Girder_Standards__A_New_Product_for_Grade_Separations_and_Interchange_.aspx) bridge box girders.
 
 Note: In order to use the GMSH mesher, you must install:
 
