@@ -99,7 +99,7 @@ def _add_examples(app, pagename, templatename, context, doctree):
         context["examples"] = [
             {"title": "Basic Shapes",  "link": f"{g}/introduction.html",      "image": "../_static/images/gallery/W14x211.png", "description": "Material and section constants."},
             {"title": "Transforms",    "link": f"{g}/transformations.html",     "image": "../_static/images/gallery/transform.png", "description": "Transform shapes."},
-            {"title": "Fibers",        "link": f"{g}/fibers.html",             "image": "../_static/images/gallery/fibers.png", "description": "Generate fibers for OpenSees."},
+            {"title": "Fibers",        "link": f"{g}/fibers.html",             "image": "../_static/images/M05.png", "description": "Generate fibers for OpenSees."},
             {"title": "Composites",   "link": f"{g}/composite.html",    "image": "../_static/images/gallery/concrete.png", "description": "."},
         ]
 
