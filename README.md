@@ -19,7 +19,7 @@
 *xsection* is a Python package designed to streamline engineering tasks involving structural cross sections. 
 Features include:
 
-- Automatic generation of fiber input data for simulations with FEDEASLab, *xara*, and *OpenSees*. 
+- Automatic generation of fiber input data for simulations with FEDEASLab, [*xara*](https://xara.so), and *OpenSees*. 
 - Calculation of section properties including:
   - **Timoshenko shear correction factors**
   - **Saint Venant and Vlasov torsion constants**
