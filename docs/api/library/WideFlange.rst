@@ -3,6 +3,9 @@
 WideFlange
 ^^^^^^^^^^
 
+.. figure:: figures/WideFlange.png
+   :width: 50%
+
 .. currentmodule:: xsection.library
 
 .. autoclass:: WideFlange
