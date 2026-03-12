@@ -3,6 +3,9 @@
 Rectangle
 ^^^^^^^^^
 
+.. figure:: figures/Rectangle.png
+   :width: 50%
+
 .. currentmodule:: xsection.library
 
 .. autoclass:: Rectangle

@@ -3,6 +3,9 @@
 HollowRectangle
 ^^^^^^^^^^^^^^^
 
+.. figure:: figures/HollowRectangle.png
+   :width: 50%
+
 .. currentmodule:: xsection.library
 
 .. autoclass:: HollowRectangle
