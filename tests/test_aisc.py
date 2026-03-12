@@ -3,7 +3,7 @@ import pytest
 import veux
 import numpy as np
 from xara.units import us, si
-from xsection.library import from_aisc, aisc_data
+from xsection.library import from_aisc, aisc_data, load_shape
 
 
 def _check_data(shape, data):
@@ -35,6 +35,11 @@ def test_data_wt():
     shape = from_aisc("WT22X145", mesh_scale=1/5)
     shape = shape.translate(-shape.centroid).elastic
     _check_data(shape, data)
+
+def test_hss():
+    shape = load_shape("HSS5x5x3/8", library="AISC16", mesh_scale=1/3, mesher="gmsh")
+
+    assert shape.area == pytest.approx(6.18, rel=1e-1)
 
 
 # def test_data_c():
