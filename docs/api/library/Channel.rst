@@ -4,6 +4,9 @@
 Channel
 ^^^^^^^
 
+.. figure:: figures/Channel.png
+   :width: 50%
+
 .. currentmodule:: xsection.library
 
 .. autoclass:: Channel
