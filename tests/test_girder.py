@@ -88,7 +88,7 @@ def test_asbi():
 
 
 def test_torsion():
-
+    # Gruttmann, Wagner (2001)
     shape = load_shape("G02", mesh_type="T6", mesh_scale=1)
 
     sv = SaintVenantSectionAnalysis(shape)
