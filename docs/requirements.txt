@@ -9,3 +9,4 @@ sphinx-sitemap<2.7.0
 sphinx-copybutton
 myst-parser
 myst-nb
+myst_sphinx_gallery
