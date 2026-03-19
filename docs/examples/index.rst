@@ -1,14 +1,28 @@
 Examples 
 ^^^^^^^^
 
+Creating Sections
+------------------
 
-.. toctree::
-   :maxdepth: 1
+.. base-gallery::
+   :tooltip:
+   :caption: Creating Sections
 
    introduction
    transformations
-   fibers
    composite
-   uniaxial-capacity
-   moment-curvature
+   girder
+   fibers
+
+
+Analyzing Sections
+------------------
+
+
+.. base-gallery::
+   :tooltip:
+   :caption: Analyzing Sections
+
+   interaction/rectangle
+   warping/composite_utwist
 
