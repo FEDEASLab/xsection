@@ -9,7 +9,7 @@ from xsection.analysis.venant import SaintVenantSectionAnalysis
 def test_shape():
     """
     El Fatmi, Rached, and Hatem Zenzri. 
-      “A Numerical Method for the Exact Elastic Beam Theory. Applications to Homogeneous and Composite Beams.” 
+      "A Numerical Method for the Exact Elastic Beam Theory. Applications to Homogeneous and Composite Beams." 
       International Journal of Solids and Structures 41, nos. 9–10 (2004): 2521–37. 
       https://doi.org/10.1016/j.ijsolstr.2003.12.011.
     """
