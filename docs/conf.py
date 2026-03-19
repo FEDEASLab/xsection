@@ -17,13 +17,17 @@ extensions = [
     'sphinx.ext.autosummary',
     # 'autoapi.extension',
     "myst_nb",
+    "myst_sphinx_gallery",
+    "sphinx_design",
     'sphinx_tabs.tabs',
     'sphinx_copybutton',
     'sphinx.ext.mathjax',
     'sphinx.ext.githubpages',
     'sphinx_sitemap'
 ]
+
 nb_execution_mode = "off"
+# nb_execution_mode = "cache"
 myst_enable_extensions = [
     "dollarmath",
     "attrs_inline"
@@ -35,7 +39,18 @@ myst_enable_extensions = [
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
-source_suffix = '.rst'
+# source_suffix = '.rst'
+source_suffix = {
+    ".rst": "restructuredtext",
+    ".md": "myst-nb",
+    ".myst": "myst-nb",
+}
+from myst_sphinx_gallery import GalleryConfig
+myst_sphinx_gallery_config = GalleryConfig(**{
+    "thumbnail_strategy": "last",
+    "notebook_thumbnail_strategy": "code"
+})
+
 root_doc = 'index'
 language = 'en'
 
