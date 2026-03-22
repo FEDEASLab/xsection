@@ -76,32 +76,55 @@ def test_asbi():
     shape = create_asbi("BC-2100-1+1500", mesher="gmsh")
     u = shape.units
     assert shape.area == pytest.approx(5_591_000*u.mm**2, rel=1e-2)
+    assert shape.flange_area()+shape.web_area() == pytest.approx(shape.area, rel=1e-1)
 
     shape = create_asbi("BC-2700-1", mesher="gmsh")
     u = shape.units
     assert shape.area == pytest.approx(5_471_000*u.mm**2, rel=1e-2)
+    assert shape.flange_area()+shape.web_area() == pytest.approx(shape.area, rel=1e-1)
 
     shape = create_asbi("BC-3000-1+750", mesher="gmsh")
     u = shape.units
     assert shape.area == pytest.approx(6_135_000*u.mm**2, rel=1e-2)
+    assert shape.flange_area()+shape.web_area() == pytest.approx(shape.area, rel=1e-1)
 
 
 
 def test_torsion():
+    """
+    [2] Paradiso, Massimo, Salvatore Sessa, Nicolò Vaiana, Francesco Marmo, and Luciano Rosati. 
+        "Shear Properties of Isotropic and Homogeneous Beam-like Solids Having Arbitrary Cross Sections."
+        International Journal of Solids and Structures 216 (May 2021): 231–49. 
+        https://doi.org/10.1016/j.ijsolstr.2021.01.012.
+    [3] Roccia, Bruno A., Carmina Alturria Lanzardo, Fernando D. Mazzone, and Cristian G. Gebhardt. 
+        "On the Homogeneous Torsion Problem for Heterogeneous and Orthotropic Cross-Sections: Theoretical and Numerical Aspects."
+        Applied Numerical Mathematics 201 (July 2024): 579–607. 
+        https://doi.org/10.1016/j.apnum.2024.03.017.
+
+    """
     # Gruttmann, Wagner (2001)
     shape = load_shape("G02", mesh_type="T6", mesh_scale=1)
+    assert shape.flange_area()+shape.web_area() == pytest.approx(shape.area, rel=1e-1)
+
+    # Center of shear wrt the bottom of the soffit
+    scy,scz = shape._analysis.shear_center()
+    assert scy == pytest.approx(0, rel=1e-3)
+    assert scz == pytest.approx(1.569, rel=1e-3)
 
     sv = SaintVenantSectionAnalysis(shape)
-    assert sv.twist_rigidity()/shape.material["G"] == pytest.approx(42.487, rel=1e-1)
+    assert sv.twist_rigidity()/shape.material["G"] == pytest.approx(42.487, rel=5e-2)
 
-    # shape = shape.translate(-sv.twist_center())
-    # assert shape.cww()[0,0]/shape.material["E"] == pytest.approx(62.788, rel=2e-1)
 
     tr = sv.create_trace(form="energetic")
     ky, kz = tr.sce()
     assert ky == pytest.approx(0.5993, rel=1e-3)
     assert kz == pytest.approx(0.2311, rel=1e-2)
 
+    # Warping constant, value from [3]
+    shape = shape.translate([-scy,-scz]) # -sv.twist_center()
+    Cw = shape.cww()[0,0]
+    # Cw = sv.twist_warp_inertia()
+    assert Cw/shape.material["E"] == pytest.approx(62.788, rel=1e-2)
 
 
 def test_fhwa():
@@ -110,6 +133,7 @@ def test_fhwa():
 
     material = {"E": 4, "G": 2}
     shape = load_shape("G03", material=material, mesh_type="T6", mesh_scale=1/3)
+    assert shape.flange_area()+shape.web_area() == pytest.approx(shape.area, rel=1e-1)
     u = shape.units
 
     sv = SaintVenantSectionAnalysis(shape)
