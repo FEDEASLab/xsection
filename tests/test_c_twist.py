@@ -26,11 +26,12 @@ def test_c01_material():
 def _test_c01_centroid():
     shape = load_shape("C01", nu=0.3)
     shape = shape.translate(-shape.centroid)
+    sv = SaintVenantSectionAnalysis(shape)
     A   = shape.elastic.A
     Iy  = shape.elastic.Iy
     Iz  = shape.elastic.Iz
     Iyz = shape.elastic.Iyz
-    J   = shape.elastic.J
+    J   = sv.twist_rigidity()/shape.material["G"]
 
 
     assert A   == pytest.approx(    58.8, rel=0.1)
