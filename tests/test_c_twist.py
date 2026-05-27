@@ -48,7 +48,7 @@ def test_c04():
     # Pilkey
     E = 10
     material = {"E": E, "G": E/(2*(1+0.3))}
-    shape = load_shape("C04", material=material)
+    shape = load_shape("C04", material=material, mesh_scale=1/25)
     shape = shape.translate(-shape.centroid)
 
     sv = SaintVenantSectionAnalysis(shape)
