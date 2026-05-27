@@ -27,11 +27,12 @@ channel = [
     [0.01, 2.78436565, 9.53031691e-2, 3.03596030e3, 6.29488297e2, 3.96167673e4]
 ]
 
+# Table 4
 neuber = [
     [0.10,  1,         1.23677966e4,  1.57591655e3, 3.37620344e3,  3.81971644e3],
     [0.05,  1,         7.04796191e3,  2.82805259e2, 2.12270476e3,  7.18179690e2],
     # [0.01,  1,         1.56287589e3,  3.84789924e0, 5.07306512e2,  1.40319061e1],
-
+# Table 5
     [0.10,  2,         1.50314876e4,  2.92100250e4, 5.23517907e3,  7.42990212e5],
     [0.05,  2,         8.96257119e3,  2.62850975e4, 3.78409548e3,  8.81626379e5],
     # [0.01,  2,         2.06474176e3,  8.03505311e3, 9.94116910e2,  3.12143230e5]
@@ -170,6 +171,30 @@ def test_neuber_T6_triangle():
         assert Jvc == pytest.approx(Jv, rel=1e-2)
         assert Jac == pytest.approx(Ja, rel=2e-1)
 
+def test_neuber_T6_material():
+    material = Material(E=4, G=2)
+    for tr, rwf, J, Jw, Jv, Ja in neuber:
+        tw = 20*tr
+        tf = rwf*tw
+        s = HollowRectangle(
+                d=20,
+                b=20,
+                tw=tw,
+                tf=tf,
+                material=material,
+                mesh_scale=1/4,
+                mesh_type="T6",
+                mesher="gmsh"
+        )
+        sv = SaintVenantSectionAnalysis(s)
+        Jsc = sv.twist_rigidity()/material["G"]
+        # Jwc = s.cww()[0,0]
+        # Jvc = s.cvv()[0,0]
+        # Jac = s.css()
+        assert Jsc == pytest.approx(J,  rel=1e-2)
+        # assert Jwc == pytest.approx(Jw, rel=1e-1)
+        # assert Jvc == pytest.approx(Jv, rel=1e-2)
+        # assert Jac == pytest.approx(Ja, rel=2e-1)
 
 if __name__ == "__main__":
 
