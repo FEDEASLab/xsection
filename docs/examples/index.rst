@@ -1,18 +1,30 @@
 Examples 
 ^^^^^^^^
 
-Creating Sections
+Creating Shapes
 ------------------
 
 .. base-gallery::
    :tooltip:
-   :caption: Creating Sections
+   :caption: Creating Shapes
 
    introduction
    transformations
    composite
    girder
+
+
+Fibers
+------
+
+
+.. base-gallery::
+   :tooltip:
+   :caption: Creating Fibers
+
    fibers
+   fibers2
+   fibers3
 
 
 Analyzing Sections
