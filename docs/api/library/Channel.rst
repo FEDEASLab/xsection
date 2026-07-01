@@ -16,7 +16,7 @@ Channel
    .. autosummary::
          
       ~Channel.d
-      ~Channel.bf
+      ~Channel.b
       ~Channel.tf
       ~Channel.tw 
       ~Channel.k
