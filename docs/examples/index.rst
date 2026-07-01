@@ -12,6 +12,7 @@ Creating Shapes
    transformations
    composite
    girder
+   european
 
 
 Fibers
@@ -37,4 +38,5 @@ Analyzing Sections
 
    interaction/rectangle
    warping/composite_utwist
+   plastic/multiaxial
 
