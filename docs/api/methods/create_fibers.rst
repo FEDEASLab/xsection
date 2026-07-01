@@ -3,6 +3,6 @@
 create_fibers
 =============
 
-.. currentmodule:: xsection.warping
+.. currentmodule:: xsection._shape
 
 .. automethod:: WarpingSection.create_fibers
