@@ -5,20 +5,49 @@
 
 # In this example a composite section is built by joining multiple basic shapes.
 
+from turtle import circle
 
-
+import pytest
+import xara
 from xsection import CompositeSection
-from xara.units.iks import inch, foot, ksi, kip 
-import matplotlib.pyplot as plt
+from xara import UniaxialMaterial
+from xara.units.iks import inch, foot, ksi, kip
 import numpy as np
 import veux
 
 from xsection.library import Rectangle, Circle, HollowRectangle
 from xsection import CompositeSection
 
+def _xara_fibers(section, y=None):
+    model = xara.Model(ndm=3, ndf=6)
 
+    # Define two nodes at (0,0)
+    model.node(1, (0.0, 0.0, 0))
+    model.node(2, (0.0, 0.0, 0))
 
-from xara import UniaxialMaterial, Section
+    # Fix all degrees of freedom except axial and bending
+    model.fix(1, (1, 1, 1, 1, 1, 1))
+    model.fix(2, (0, 1, 1, 1, 0, 1))
+
+    # Define materials
+    for material in materials.values():
+        model.material(material)
+
+    # Define section
+    model.section(section)
+
+    # Define element
+    x = (1.0, 0.0, 0.0)
+    if y is None:
+        y = (0.0, 1.0, 0.0)
+    model.element("ZeroLengthSection", 1, (1, 2), section, y=y, x=x)
+
+    data = model.asdict()
+
+    fibers = data["StructuralAnalysisModel"]["properties"]["sections"][0]["fibers"]
+
+    return dict(fibers=fibers, area=sum(f["area"] for f in fibers))
+
 
 # Define materials
 materials = {
@@ -55,12 +84,21 @@ def _moi(section):
     Iz = 0
     
 
+def test_circle():
+    circle = Circle(radius=5, material=materials["rebar"])
+
+    # Single centroid point
+    section = xara.FrameSection("UniaxialFiber", circle, fibers={"d": 1})
+    fibers = _xara_fibers(section)
+    assert fibers["area"] == pytest.approx(25 * np.pi, rel=1e-6)
+
+    # Sunflower method
+    section = xara.FrameSection("UniaxialFiber", circle, fibers={"r": 4, "rule": "sunflower"})
+    fibers = _xara_fibers(section)
+    assert fibers["area"] == pytest.approx(25 * np.pi, rel=1e-4)
+
+
 # ## Rectangle
-
-# 
-
-
-
 
 def test_rectangle_fibers():
 
@@ -102,9 +140,8 @@ def test_rectangle_fibers():
         "core":  {"d": 10, "b": 5},
     }
 
-    import xara 
 
-    section = xara.Section("Fiber", shape, fibers=fibers)
+    section = xara.FrameSection("Fiber", shape, fibers=fibers)
 
     veux.draw_shape(section)
 
