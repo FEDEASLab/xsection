@@ -1,6 +1,6 @@
 [project]
 name = "xsection"
-version = "0.0.33"
+version = "0.0.34"
 authors = [
   {name="Claudio M. Perez", email="50180406+claudioperez@users.noreply.github.com"}
 ]
@@ -45,10 +45,10 @@ dependencies = [
   "numpy",
   "numba",
   "shapely",
-  "shps>=0.0.33",
+  "shps>=0.0.35",
   "veux>=0.0.40",
   # Analysis
-  "xara>=0.0.17", # 16
+  "xara>=0.0.35",
   "opensees>=0.1.22",
   # Meshing
 # "pygmsh",
