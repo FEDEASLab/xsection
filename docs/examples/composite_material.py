@@ -21,7 +21,6 @@ from xara.units.iks import inch, foot, ksi, kip
 
 # We begin by specifying the dimensions of our section.
 
-# In[3]:
 
 
 d =  7/8*inch
@@ -30,8 +29,6 @@ cover = 1*inch + ds
 diameter = 15*inch
 core_radius = diameter/2 - cover - ds - d/2
 nr = 20 # number of longitudinal reinforcing bars
-
-# In[4]:
 
 
 # Define the exterior shape
@@ -46,8 +43,6 @@ interior = Equigon(core_radius, z=1,
 # The reinforcing bars are defined separately as small circles. Because stresses generally don't vary drastically within individual reinforcing bars, we'll use a much coarser circle approximation by setting `divisions=4` and `mesh_scale=2`.
 # 
 # The location of the first bar is given explicitly, and the remaining bars are generated automatically by evenly spacing them around the core.
-
-# In[5]:
 
 
 # A single representative rebar
