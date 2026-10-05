@@ -1,6 +1,6 @@
 [project]
 name = "xsection"
-version = "0.0.34"
+version = "0.0.39"
 authors = [
   {name="Claudio M. Perez", email="50180406+claudioperez@users.noreply.github.com"}
 ]
@@ -72,3 +72,5 @@ requires = [
 
 build-backend = "setuptools.build_meta"
 
+[tool.setuptools.package-data]
+xsection = ["assets/*"]

@@ -10,9 +10,10 @@ Creating Shapes
 
    introduction
    transformations
-   composite
-   girder
-   european
+   shapes/composite
+   shapes/girder
+   shapes/european
+   shapes/double-octagon
 
 
 Fibers
@@ -26,6 +27,7 @@ Fibers
    fibers
    fibers2
    fibers3
+   fibers/circle
 
 
 Analyzing Sections

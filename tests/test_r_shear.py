@@ -177,7 +177,6 @@ def square_shear(depth, width, nu, n_terms=20000):
 def test_T6():
     depth  = 24.0
 
-
     point_poisson = [-0.9, -0.5, 0, 0.3, 0.499]
     point_aspects = [1/2, 1,  2]
 
@@ -414,5 +413,5 @@ def _test_temp():
 
 if __name__ == "__main__":
 
-    test_temp()
+    _test_temp()
     test_T3()

@@ -4,7 +4,9 @@ import veux
 import numpy as np
 from xara.units import us, si
 from xsection.library import from_aisc, aisc_data, load_shape
+import xara
 
+UnitMaterial = xara.MultiaxialMaterial("ElasticIsotropic", E=1, G=1)
 
 def _check_data(shape, data):
     assert shape.A  == pytest.approx(data["A"],  abs=0.5)

@@ -8,8 +8,8 @@ The :mod:`xsection` package comprises the following core geometry classes:
 
 .. autosummary::
 
-   PolygonSection
-   CompositeSection
+   PolygonShape
+   CompositeShape
 
 
 .. currentmodule:: xsection.library 

@@ -1,7 +1,8 @@
 
 import pytest
+import xara
 from xsection.library._asbi import create_asbi, SingleCellGirder
-from xsection.analysis import SaintVenantSectionAnalysis
+from xsection.analysis import WarpingAnalysis
 from xsection._benchmarks import load_shape
 r"""
 2400-2:
@@ -38,13 +39,20 @@ r"""
     \end{tabular}
 """
 
+Material = xara.MultiaxialMaterial("ElasticIsotropic", E=1, G=1)
+
+def _check_xara_elastic(shape):
+    section = xara.FrameSection("Elastic", shape)
+    assert section.constants._validate_resultants(["N", "Vy", "Vz", "T", "My", "Mz"])
+
 
 def test_asbi():
 
     # Flat soffit
-    shape = create_asbi("SS-1800-1", mesher="gmsh")
+    shape = create_asbi("SS-1800-1", mesher="gmsh", material=Material)
     u = shape.units
     assert shape.area == pytest.approx(3_920_000*u.mm**2, rel=2e-2)
+    _check_xara_elastic(shape)
 
     shape = create_asbi("SS-1800-1+150", mesher="gmsh")
     u = shape.units
@@ -106,12 +114,17 @@ def test_torsion():
     shape = load_shape("G02", mesh_type="T6", mesh_scale=1)
     assert shape.flange_area()+shape.web_area() == pytest.approx(shape.area, rel=1e-1)
 
+    section = xara.FrameSection("Elastic", shape)
+
+    SC   = section.constants
+    assert SC._validate_resultants(["N", "Vy", "Vz", "T", "My", "Mz"])
+
     # Center of shear wrt the bottom of the soffit
     scy,scz = shape._analysis.shear_center()
     assert scy == pytest.approx(0, rel=1e-3)
     assert scz == pytest.approx(1.569, rel=1e-3)
 
-    sv = SaintVenantSectionAnalysis(shape)
+    sv = WarpingAnalysis(shape)
     assert sv.twist_rigidity()/shape.material["G"] == pytest.approx(42.487, rel=5e-2)
 
 
@@ -136,7 +149,7 @@ def test_fhwa():
     assert shape.flange_area()+shape.web_area() == pytest.approx(shape.area, rel=1e-1)
     u = shape.units
 
-    sv = SaintVenantSectionAnalysis(shape)
+    sv = WarpingAnalysis(shape)
     J = sv.twist_rigidity()/shape.material["G"]
 
     assert J == pytest.approx(1697.5*u.ft**4, rel=5e-2)

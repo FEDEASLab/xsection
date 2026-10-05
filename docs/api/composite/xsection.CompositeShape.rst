@@ -1,4 +1,4 @@
-﻿xsection.CompositeSection
+﻿xsection.CompositeShape
 =========================
 
 .. figure:: composite-tee.png 
@@ -11,7 +11,7 @@
 .. currentmodule:: xsection
 
 
-.. autoclass:: CompositeSection
+.. autoclass:: CompositeShape
 
    
    .. automethod:: __init__
@@ -21,18 +21,18 @@
 
    .. autosummary::
    
-      ~CompositeSection.__init__
-      ~CompositeSection.add_patch
-      ~CompositeSection.add_patches
-      ~CompositeSection.create_fibers
-      ~CompositeSection.exterior
-      ~CompositeSection.integrate
-      ~CompositeSection.interior
-      ~CompositeSection.linspace
-      ~CompositeSection.rotate
-      ~CompositeSection.summary
-      ~CompositeSection.torsion_warping
-      ~CompositeSection.translate
+      ~CompositeShape.__init__
+      ~CompositeShape.add_patch
+      ~CompositeShape.add_patches
+      ~CompositeShape.create_fibers
+      ~CompositeShape.exterior
+      ~CompositeShape.integrate
+      ~CompositeShape.interior
+      ~CompositeShape.linspace
+      ~CompositeShape.rotate
+      ~CompositeShape.summary
+      ~CompositeShape.torsion_warping
+      ~CompositeShape.translate
    
 
 
@@ -40,9 +40,9 @@
 
 .. autosummary::
 
-   ~CompositeSection.centroid
-   ~CompositeSection.elastic <elastic>
-   ~CompositeSection.patches
+   ~CompositeShape.centroid
+   ~CompositeShape.elastic <elastic>
+   ~CompositeShape.patches
    
 Example
 -------
@@ -53,7 +53,7 @@ Example
       .. code-block:: python
 
          import veux
-         from xsection import CompositeSection
+         from xsection import CompositeShape
          from xsection.library import Rectangle, Circle
          from xara.units import iks
 
@@ -63,7 +63,7 @@ Example
          cv  =  2*iks.inch
          bar = Circle(0.4, z=2, mesh_scale=1, divisions=10)
 
-         c = CompositeSection([
+         c = CompositeShape([
                Rectangle(t,d),
                Rectangle(b,t).translate([0, -d/2-t/2]),
                *bar.linspace([-(b/2-cv), -d/2-t/1.5], [b/2-cv, -d/2-t/1.5], 4, z=2)
@@ -92,10 +92,10 @@ Example
          flange = xl.Rectangle(t, d);
          web    = xl.Rectangle(b, t).translate({0, -d/2-t/2});
 
-         section = xs.CompositeSection({flange, web});
+         section = xs.CompositeShape({flange, web});
 
          % Combine into one shape
-         section = xs.CompositeSection({web, flange});
+         section = xs.CompositeShape({web, flange});
          
          %
          % Add reinforcement

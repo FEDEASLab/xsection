@@ -11,7 +11,7 @@ import numpy as np
 from xsection import CompositeSection, PolygonSection
 from xara import Material
 from xsection.library import Ellipse
-from xsection.analysis import SaintVenantSectionAnalysis, ElasticAnalysis
+from xsection.analysis import ElasticAnalysis
 
 class EllipseSolution:
 

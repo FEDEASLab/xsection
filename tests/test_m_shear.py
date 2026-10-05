@@ -3,7 +3,7 @@ import pytest
 from xsection import CompositeSection
 from xsection.library import Rectangle
 from xsection.properties import torsion_constant
-from xsection.analysis.venant import SaintVenantSectionAnalysis
+from xsection.analysis import WarpingAnalysis
 
 
 def test_shape():
@@ -27,13 +27,13 @@ def test_shape():
 
     shape = shape.translate(-shape._analysis.centroid())
 
-    sv1 = SaintVenantSectionAnalysis(s1, nu=0.33)
+    sv1 = WarpingAnalysis(s1, nu=0.33)
 
     print(torsion_constant(s1))
     print(sv1.twist_rigidity()/s1.material["G"])
 
 
-    sv = SaintVenantSectionAnalysis(shape, nu=0.33)
+    sv = WarpingAnalysis(shape, nu=0.33)
     assert sv.twist_rigidity()/sv1.twist_rigidity() == pytest.approx(0.525, rel=1e-3)
 
     tr = sv.create_trace(form="energetic")
