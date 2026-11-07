@@ -1,6 +1,6 @@
 [project]
 name = "xsection"
-version = "0.0.40"
+version = "0.0.41"
 authors = [
   {name="Claudio M. Perez", email="50180406+claudioperez@users.noreply.github.com"}
 ]
@@ -19,25 +19,25 @@ keywords = [
 ]
 
 classifiers = [
-    'Development Status :: 2 - Pre-Alpha',
-    'Intended Audience :: Science/Research',
-    'Intended Audience :: Developers',
-    'Programming Language :: Python',
-    'Programming Language :: Python :: 3',
-    'Programming Language :: Python :: 3.8',
-    'Programming Language :: Python :: 3.9',
-    'Programming Language :: Python :: 3.10',
-    'Programming Language :: Python :: 3.11',
-    'Programming Language :: Python :: 3.12',
-    'Programming Language :: Python :: 3 :: Only',
+  'Development Status :: 2 - Pre-Alpha',
+  'Intended Audience :: Science/Research',
+  'Intended Audience :: Developers',
+  'Programming Language :: Python',
+  'Programming Language :: Python :: 3',
+  'Programming Language :: Python :: 3.8',
+  'Programming Language :: Python :: 3.9',
+  'Programming Language :: Python :: 3.10',
+  'Programming Language :: Python :: 3.11',
+  'Programming Language :: Python :: 3.12',
+  'Programming Language :: Python :: 3 :: Only',
 
-    'Topic :: Software Development',
-    'Topic :: Scientific/Engineering',
+  'Topic :: Software Development',
+  'Topic :: Scientific/Engineering',
 
-    'Operating System :: Microsoft :: Windows',
-    'Operating System :: POSIX',
-    'Operating System :: Unix',
-    'Operating System :: MacOS',
+  'Operating System :: Microsoft :: Windows',
+  'Operating System :: POSIX',
+  'Operating System :: Unix',
+  'Operating System :: MacOS',
 ]
 
 
